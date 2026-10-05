@@ -42,6 +42,13 @@ export function MockScreenView({ screen }: { screen: ScreenKey }) {
         <p className="text-[6.4cqw] font-extrabold leading-none tracking-tight">{s.title}</p>
         <p className="mt-[1.4cqw] text-[3.4cqw] text-muted">{s.subtitle}</p>
       </div>
+      {s.pills && (
+        <div className="mt-[3.5cqw] flex gap-[1.8cqw]">
+          {s.pills.map((p, i) => (
+            <span key={p} className={`rounded-full px-[3cqw] py-[1.2cqw] text-[3cqw] font-semibold ${i === 2 ? "bg-tint text-ink" : "border border-line text-muted"}`}>{p}</span>
+          ))}
+        </div>
+      )}
       <div className={`mt-[4cqw] rounded-[4.5cqw] p-[4cqw] ${t.bg}`}>
         <p className={`text-[3.2cqw] font-semibold ${t.ink}`}>{s.label}</p>
         <p className={`mt-[1cqw] text-[8cqw] font-extrabold leading-none tracking-tight ${t.ink}`}>{s.value}</p>
@@ -59,6 +66,16 @@ export function MockScreenView({ screen }: { screen: ScreenKey }) {
           <Row key={r.title} row={r} />
         ))}
       </ul>
+      {s.more && (
+        <>
+          <p className="mt-[4.5cqw] text-[3.8cqw] font-bold">{s.more.title}</p>
+          <ul className="mt-[1cqw] rounded-[4cqw] border border-line bg-card px-[3.5cqw]">
+            {s.more.rows.map((r) => (
+              <Row key={r.title} row={r} />
+            ))}
+          </ul>
+        </>
+      )}
       <div className="mt-auto flex justify-around border-t border-line pt-[3cqw] text-[3cqw] font-semibold text-muted">
         <span className="font-extrabold text-primary">Home</span>
         <span>Insights</span>

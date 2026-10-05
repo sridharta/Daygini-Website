@@ -10,19 +10,20 @@ function PlayIcon() {
 }
 
 /** Android is live; iOS is deliberately a non-interactive element, never a link. */
-export function StoreButtons({ variant }: { variant: "hero" | "primary" }) {
+export function StoreButtons({ variant, size = "md", center = false }: { variant: "hero" | "primary"; size?: "md" | "lg"; center?: boolean }) {
+  const big = size === "lg" ? "min-h-14 text-lg" : "min-h-12 text-base";
   const soon =
     variant === "hero"
       ? "border-on-hero/40 text-on-hero-muted"
       : "border-line text-muted";
   return (
-    <div className="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-      <ButtonLink variant={variant} href={site.playStoreUrl}>
+    <div className={`flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center ${center ? "items-stretch sm:justify-center" : "items-stretch sm:items-center"}`}>
+      <ButtonLink variant={variant} href={site.playStoreUrl} className={`${big} ${size === "lg" ? "px-7" : ""}`}>
         <PlayIcon />
         Get it on Google Play
       </ButtonLink>
       <span
-        className={`inline-flex min-h-12 cursor-not-allowed whitespace-nowrap items-center justify-center rounded-button border border-dashed px-5 text-base font-semibold ${soon}`}
+        className={`inline-flex ${big} cursor-not-allowed whitespace-nowrap items-center justify-center rounded-button border border-dashed px-5 font-semibold ${soon}`}
       >
         App Store · Coming Soon
       </span>

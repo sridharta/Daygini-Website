@@ -21,12 +21,14 @@ export type AccentKey = FeatureKey | "primary";
 
 export const features: {
   key: FeatureKey;
+  headline: string;
   name: string;
   summary: string;
   points: string[];
 }[] = [
   {
     key: "money",
+    headline: "Know where your money goes.",
     name: "Money",
     summary:
       "Income, expenses, subscriptions, loans, transaction history and insights.",
@@ -38,6 +40,7 @@ export const features: {
   },
   {
     key: "health",
+    headline: "Build better daily habits.",
     name: "Health",
     summary: "Water, calories, steps, sleep, weight, medication and breathing.",
     points: [
@@ -48,6 +51,7 @@ export const features: {
   },
   {
     key: "todo",
+    headline: "Know what needs to get done.",
     name: "Todo",
     summary:
       "Time-based tasks organized into Today, Upcoming, Unscheduled and Completed.",
@@ -59,6 +63,7 @@ export const features: {
   },
   {
     key: "lists",
+    headline: "Keep the things you need organized.",
     name: "Lists",
     summary:
       "Non-time-based checklists, grocery lists and reusable personal lists.",
@@ -70,6 +75,7 @@ export const features: {
   },
   {
     key: "occasions",
+    headline: "Remember the people and moments that matter.",
     name: "Occasions",
     summary:
       "Birthdays, anniversaries, weddings and other important occasions, with reminders.",
@@ -82,29 +88,17 @@ export const features: {
 ];
 
 export const whyReasons = [
-  {
-    title: "One app instead of five",
-    body: "A budget app, a habit tracker, a notes app, a to-do app and a calendar reminder all do one job each. Daygini keeps them together so your day makes sense at a glance.",
-  },
-  {
-    title: "Todo and Lists are separate on purpose",
-    body: "Tasks have a time. Lists don't. Keeping them apart means your Today view only shows what needs doing, and your groceries never clutter it.",
-  },
-  {
-    title: "Reminders for what you can't afford to forget",
-    body: "Tasks, medication and occasions can all remind you, so the important things reach you without you checking.",
-  },
-  {
-    title: "Quick to add, easy to read",
-    body: "Add an expense, a glass of water or a task in a couple of taps, then get back to your day. Everything uses the same simple design.",
-  },
+  { icon: "stack", title: "One app instead of many", body: "Money, health, tasks, lists and occasions in one place, not five disconnected apps." },
+  { icon: "sun", title: "Built around everyday life", body: "Made for the things you actually manage day to day." },
+  { icon: "split", title: "Todo and Lists are separate on purpose", body: "Things to do have a time. Things to remember or collect don't." },
+  { icon: "minimal", title: "Simple by design", body: "A calm, consistent app that is quick to add to and easy to read." },
+  { icon: "chart", title: "Useful insights", body: "Summaries and trends from what you already track." },
 ] as const;
 
 export const insightPoints = [
   "Where your money goes, by category",
-  "How your water, sleep, steps and weight are trending",
-  "How many tasks you finish, and how often you take your medication",
-  "Which occasions are coming up",
+  "How your health habits are trending",
+  "How many tasks you complete",
 ] as const;
 
 export const faqs = [

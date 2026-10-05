@@ -21,6 +21,8 @@ export type MockScreen = {
   chart?: number[];
   rowsTitle: string;
   rows: MockRow[];
+  pills?: string[];
+  more?: { title: string; rows: MockRow[] };
 };
 
 /**
@@ -45,6 +47,10 @@ export const screens: Record<ScreenKey, MockScreen> = {
       { title: "Lists", meta: "Weekly groceries", value: "4 left", accent: "lists" },
       { title: "Occasions", meta: "Asha's birthday", value: "Today", accent: "occasions" },
     ],
+    more: { title: "Up next", rows: [
+      { title: "Send invoice", meta: "10:00 AM · Todo", accent: "todo" },
+      { title: "Take vitamins", meta: "1:00 PM · Medication", accent: "health" },
+    ] },
   },
   money: {
     title: "Money",
@@ -60,6 +66,10 @@ export const screens: Record<ScreenKey, MockScreen> = {
       { title: "Freelance", meta: "Income", value: "+₹6,500", accent: "money" },
       { title: "Music plan", meta: "Subscription", value: "−₹119", accent: "money" },
     ],
+    more: { title: "Coming up", rows: [
+      { title: "Rent", meta: "Due Friday", value: "₹12,000", accent: "money" },
+      { title: "Electricity", meta: "Due Sunday", value: "₹1,480", accent: "money" },
+    ] },
   },
   health: {
     title: "Health",
@@ -75,6 +85,10 @@ export const screens: Record<ScreenKey, MockScreen> = {
       { title: "Sleep", meta: "Last night", value: "7h 20m", accent: "health" },
       { title: "Medication", meta: "Due 8:00 PM", accent: "health" },
     ],
+    more: { title: "Also today", rows: [
+      { title: "Breathing", meta: "Calm 4-2-6", value: "3 min", accent: "health" },
+      { title: "Weight", meta: "This week", value: "68.4 kg", accent: "health" },
+    ] },
   },
   todo: {
     title: "Todo",
@@ -89,6 +103,10 @@ export const screens: Record<ScreenKey, MockScreen> = {
       { title: "Renew insurance", meta: "6:00 PM · Personal", box: true, accent: "todo" },
       { title: "Pay rent", meta: "Completed", box: true, done: true, accent: "todo" },
     ],
+    more: { title: "Upcoming", rows: [
+      { title: "Team review", meta: "Tomorrow · Work", box: true, accent: "todo" },
+      { title: "Book flights", meta: "Friday · Personal", box: true, accent: "todo" },
+    ] },
   },
   lists: {
     title: "Lists",
@@ -124,11 +142,16 @@ export const screens: Record<ScreenKey, MockScreen> = {
     label: "Top spending category",
     value: "Food",
     chart: [30, 55, 45, 70, 50, 85, 60],
+    pills: ["Today", "7D", "30D", "3M"],
     rowsTitle: "By category",
     rows: [
       { title: "Food", value: "38%", accent: "money" },
       { title: "Transport", value: "21%", accent: "money" },
       { title: "Bills", value: "17%", accent: "money" },
     ],
+    more: { title: "Health trends", rows: [
+      { title: "Water", meta: "Daily average", value: "6.2 glasses", accent: "health" },
+      { title: "Sleep", meta: "Daily average", value: "7h 05m", accent: "health" },
+    ] },
   },
 };

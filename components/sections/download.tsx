@@ -4,19 +4,17 @@ import { StoreButtons } from "@/components/ui/store-buttons";
 
 export function Download() {
   return (
-    <section id="download" aria-labelledby="download-title" className="pb-20 pt-8 sm:pb-28">
+    <section id="download" aria-labelledby="download-title" className="pb-24 sm:pb-32">
       <Container>
-        <div className="on-hero grid items-center gap-10 rounded-panel bg-gradient-to-br from-hero-from to-hero-to p-8 text-on-hero sm:p-14 md:grid-cols-[1fr_auto]">
-          <div>
-            <h2 id="download-title" className="text-3xl font-extrabold leading-tight tracking-tight sm:text-5xl">
-              Start organizing your day with Daygini.
-            </h2>
-            <p className="mt-4 max-w-md text-lg text-on-hero-muted">Available now on Android. The iPhone version is coming soon.</p>
-            <div className="mt-8">
-              <StoreButtons variant="hero" />
-            </div>
+        <div className="on-hero flex flex-col items-center rounded-panel bg-gradient-to-br from-hero-from to-hero-to px-6 py-20 text-center text-on-hero sm:px-14 sm:py-28">
+          <Image src="/daygini-mark-128.png" alt="" width={64} height={64} className="size-16 rounded-2xl" />
+          <h2 id="download-title" className="mt-8 max-w-3xl text-4xl font-extrabold leading-[1.05] tracking-[-0.035em] sm:text-6xl">
+            Make everyday life easier to manage.
+          </h2>
+          <p className="mt-5 max-w-lg text-lg text-balance text-on-hero-muted sm:text-xl">Money. Health. Tasks. Lists. Occasions. One simple app.</p>
+          <div className="mt-10 w-full sm:w-auto">
+            <StoreButtons variant="hero" size="lg" center />
           </div>
-          <Image src="/daygini-mark.png" alt="" width={160} height={160} className="hidden size-40 rounded-[2.2rem] md:block" />
         </div>
       </Container>
     </section>
