@@ -6,7 +6,7 @@ export const site = {
     "Daygini helps you manage money, track health, organize tasks and lists, and remember important occasions in one simple app.",
   supportEmail: "support@daygini.com",
   playStoreUrl: "https://play.google.com/store/apps/details?id=com.daygini.app",
-  legalUpdated: "17 August 2026",
+  legalUpdated: "6 October 2026",
 } as const;
 
 export const nav = [
@@ -117,6 +117,10 @@ export const faqs = [
   {
     q: "I am not getting reminders. What should I check?",
     a: "Make sure notifications are allowed for Daygini in your phone settings, and that battery optimization is not stopping the app from running in the background.",
+  },
+  {
+    q: "How do I delete my account?",
+    a: "Open Daygini, go to Settings, then Account, then Delete account. You can read the full steps, and what happens to your information, on the account deletion page.",
   },
   {
     q: "How do I report a problem or suggest a feature?",

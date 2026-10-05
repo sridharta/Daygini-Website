@@ -20,3 +20,8 @@ export function Prose({ heading, children }: { heading: string; children: React.
     </section>
   );
 }
+
+/** Visible marker for legal details that still need to be confirmed. */
+export function Placeholder({ children }: { children: React.ReactNode }) {
+  return <p className="rounded-tile border border-dashed border-primary bg-primary-container p-4 font-semibold text-on-primary-container">{children}</p>;
+}

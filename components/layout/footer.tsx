@@ -6,6 +6,7 @@ import { Logo } from "./logo";
 const legal = [
   { label: "Privacy Policy", href: "/privacy" },
   { label: "Terms & Conditions", href: "/terms" },
+  { label: "Delete account", href: "/delete-account" },
 ];
 
 export function Footer() {

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageShell } from "@/components/ui/page-shell";
 import { ButtonLink } from "@/components/ui/button";
 import { faqs, site } from "@/content/site";
@@ -25,7 +26,7 @@ export default function Support() {
               {f.q}
               <span aria-hidden="true" className="text-xl text-muted transition-transform group-open:rotate-45">+</span>
             </summary>
-            <p className="mt-3 max-w-prose leading-relaxed text-muted">{f.a}</p>
+            <p className="mt-3 max-w-prose leading-relaxed text-muted">{f.a}{f.q === "How do I delete my account?" && <> <Link href="/delete-account" className="font-semibold text-ink underline underline-offset-4">Delete your account</Link>.</>}</p>
           </details>
         ))}
       </div>
