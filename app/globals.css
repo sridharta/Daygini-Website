@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+/*
+ * Daygini design tokens — mirrored from the mobile app
+ * (lib/core/theme/design_tokens/brands/daygini_tokens.dart).
+ * This file is the single source of truth; components use the Tailwind
+ * utilities generated from the @theme block below, never raw hex values.
+ */
+:root {
+  --surface: #fbf7f2;
+  --card: #ffffff;
+  --ink: #241c17;
+  --muted: #6b5f56;
+  --line: #e3ddd6;
+  --tint: #ede7df;
+
+  --primary: #b8461a;
+  --on-primary: #ffffff;
+  --primary-container: #ffdbd0;
+  --on-primary-container: #723520;
+
+  --hero-from: #b8461a;
+  --hero-to: #723520;
+  --on-hero: #ffffff;
+  --on-hero-muted: #ffdbd0;
+  --hero-action: #fbf7f2;
+  --on-hero-action: #723520;
+
+  --money: #00a56a;
+  --money-bg: #e2f9ef;
+  --money-ink: #007c50;
+  --health: #d41472;
+  --health-bg: #ffe8f1;
+  --health-ink: #c9136c;
+  --todo: #4f46e5;
+  --todo-bg: #e0e7ff;
+  --todo-ink: #3730a3;
+  --lists: #059cc8;
+  --lists-bg: #e6f7fc;
+  --lists-ink: #047596;
+  --occasions: #f59f00;
+  --occasions-bg: #fff3df;
+  --occasions-ink: #956100;
+
+  --radius-button: 14px;
+  --radius-tile: 16px;
+  --radius-card: 22px;
+  --radius-panel: 28px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface: #171310;
+    --card: #231a16;
+    --ink: #f1dfd9;
+    --muted: #c0aca4;
+    --line: #53433e;
+    --tint: #362c25;
+
+    --primary: #ffb59a;
+    --on-primary: #5a1c00;
+    --primary-container: #71361d;
+    --on-primary-container: #ffdbce;
+
+    --hero-from: #71361d;
+    --hero-to: #5a1c00;
+    --on-hero: #ffdbce;
+    --on-hero-muted: #e8bfb0;
+    --hero-action: #ffdbce;
+    --on-hero-action: #5a1c00;
+
+    --money: #72e2b1;
+    --money-bg: #0b4a35;
+    --money-ink: #72e2b1;
+    --health: #ff87be;
+    --health-bg: #64143c;
+    --health-ink: #ff87be;
+    --todo: #a5b4fc;
+    --todo-bg: #312e81;
+    --todo-ink: #c7d2fe;
+    --lists: #7ddcf4;
+    --lists-bg: #104558;
+    --lists-ink: #7ddcf4;
+    --occasions: #ffc768;
+    --occasions-bg: #654313;
+    --occasions-ink: #ffc768;
+  }
+}
+
+@theme inline {
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+
+  --color-surface: var(--surface);
+  --color-card: var(--card);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-tint: var(--tint);
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
+  --color-primary-container: var(--primary-container);
+  --color-on-primary-container: var(--on-primary-container);
+  --color-hero-from: var(--hero-from);
+  --color-hero-to: var(--hero-to);
+  --color-on-hero: var(--on-hero);
+  --color-on-hero-muted: var(--on-hero-muted);
+  --color-hero-action: var(--hero-action);
+  --color-on-hero-action: var(--on-hero-action);
+
+  --color-money: var(--money);
+  --color-money-bg: var(--money-bg);
+  --color-money-ink: var(--money-ink);
+  --color-health: var(--health);
+  --color-health-bg: var(--health-bg);
+  --color-health-ink: var(--health-ink);
+  --color-todo: var(--todo);
+  --color-todo-bg: var(--todo-bg);
+  --color-todo-ink: var(--todo-ink);
+  --color-lists: var(--lists);
+  --color-lists-bg: var(--lists-bg);
+  --color-lists-ink: var(--lists-ink);
+  --color-occasions: var(--occasions);
+  --color-occasions-bg: var(--occasions-bg);
+  --color-occasions-ink: var(--occasions-ink);
+
+  --radius-button: var(--radius-button);
+  --radius-tile: var(--radius-tile);
+  --radius-card: var(--radius-card);
+  --radius-panel: var(--radius-panel);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--surface);
+  color: var(--ink);
+  font-family: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.on-hero :focus-visible {
+  outline-color: var(--on-hero);
+}
+
+/* The only non-interactive motion on the site: hero phones settle in once. */
+@keyframes settle {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.settle {
+  animation: settle 700ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .settle {
+    animation: none;
+  }
+}
