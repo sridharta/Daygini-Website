@@ -82,7 +82,7 @@ export default function Terms() {
       </Prose>
 
       <Prose heading="11. Notifications and permissions">
-        <p>Some features need permission on your device, such as notifications for reminders, or contacts if you choose to pick a contact for an occasion.</p>
+        <p>Some features need permission on your device, such as notifications for reminders.</p>
         <p>You control these permissions in your device settings. If you turn a permission off, the related features may not work.</p>
       </Prose>
 

@@ -6,7 +6,7 @@ export const site = {
     "Daygini helps you manage money, track health, organize tasks and lists, and remember important occasions in one simple app.",
   supportEmail: "support@daygini.com",
   playStoreUrl: "https://play.google.com/store/apps/details?id=com.daygini.app",
-  legalUpdated: "6 October 2026",
+  legalUpdated: "9 October 2026",
 } as const;
 
 export const nav = [
