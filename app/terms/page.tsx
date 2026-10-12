@@ -13,7 +13,7 @@ const mail = <a href={`mailto:${site.supportEmail}`}>{site.supportEmail}</a>;
 
 export default function Terms() {
   return (
-    <PageShell title="Terms & Conditions" intro={`Last updated ${site.legalUpdated}. These Terms explain the rules for using Daygini in plain language.`}>
+    <PageShell title="Terms & Conditions" intro={`Last updated ${site.legalUpdated}.`}>
       <Prose heading="1. About Daygini">
         <p>Daygini is a personal organizer app. It helps you track money, track health, manage tasks and lists, and remember important occasions, with reminders and insights.</p>
         <p>Daygini is for personal, non-commercial use.</p>
