@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { PageShell, Placeholder, Prose } from "@/components/ui/page-shell";
+import { PageShell, Prose } from "@/components/ui/page-shell";
 import { site } from "@/content/site";
 
 export const metadata: Metadata = {
@@ -126,11 +126,7 @@ export default function Terms() {
         <p>For material changes, we will give notice in a suitable way, such as in the app, on this website or by email, and where the law requires it we will ask for your agreement. If you do not agree to a change, you can stop using Daygini and delete your account.</p>
       </Prose>
 
-      <Prose heading="21. Governing law">
-        <Placeholder>[To be confirmed before release: the legal entity that provides Daygini, and the country or state whose law governs these Terms and where disputes are handled.]</Placeholder>
-      </Prose>
-
-      <Prose heading="22. Contact">
+      <Prose heading="21. Contact">
         <p>Questions about these Terms? Email {mail}.</p>
       </Prose>
     </PageShell>
