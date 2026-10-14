@@ -31,7 +31,8 @@ export type MockScreen = {
  * mock automatically; nothing else needs to change.
  *
  * These are the app screens cropped from the Play Store listing images
- * (daygini app repo: assets/store_listing/android), 744×1366 each.
+ * (daygini app repo: assets/store_listing/android), 744×1366 each. Insights
+ * has no listing image, so it is cropped from the dev build to the same size.
  */
 export const screenshotSize = { width: 744, height: 1366 };
 
@@ -42,6 +43,7 @@ export const screenshotFiles: Partial<Record<ScreenKey, string>> = {
   todo: "/screenshots/todo.png",
   lists: "/screenshots/lists.png",
   occasions: "/screenshots/occasions.png",
+  insights: "/screenshots/insights.png",
 };
 
 export const screens: Record<ScreenKey, MockScreen> = {

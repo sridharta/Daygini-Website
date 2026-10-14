@@ -25,7 +25,7 @@ export function Insights() {
             </ul>
           </div>
           <div className="flex h-[380px] justify-center overflow-hidden pt-4 sm:h-[560px] lg:h-[640px] lg:pt-16">
-            <PhoneFrame screen="insights" alt="Daygini Insights screen with a spending summary and category breakdown" className="relative w-[230px] shrink-0 self-start sm:w-[290px]" />
+            <PhoneFrame screen="insights" alt="Daygini Insights screen showing this month's spending broken down by category" className="relative w-[230px] shrink-0 self-start sm:w-[290px]" />
           </div>
         </div>
       </Container>
