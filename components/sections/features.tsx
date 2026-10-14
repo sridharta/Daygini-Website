@@ -34,23 +34,24 @@ function Showcase({ k, reverse = false, note }: { k: "money" | "health" | "todo"
   );
 }
 
-function Light({ k, icon, children }: { k: "lists" | "occasions"; icon: "list" | "cake"; children: React.ReactNode }) {
+function Light({ k, icon, note }: { k: "lists" | "occasions"; icon: "list" | "cake"; note?: string }) {
   const f = byKey[k];
   const t = tone[k];
   return (
-    <article className={`flex flex-col rounded-card p-8 sm:p-10 ${t.panel}`}>
+    <article className={`flex flex-col overflow-hidden rounded-card px-8 pt-8 sm:px-10 sm:pt-10 ${t.panel}`}>
       <span className={`flex size-12 items-center justify-center rounded-tile bg-card ${t.ink}`}>
         <Icon name={icon} />
       </span>
       <p className={`mt-6 text-base font-bold ${t.ink}`}>{f.name}</p>
       <h3 className="mt-2 text-2xl font-extrabold leading-tight tracking-[-0.03em] sm:text-3xl">{f.headline}</h3>
       <p className="mt-3 max-w-sm leading-relaxed text-muted">{f.summary}</p>
-      <div className="mt-8 space-y-2" aria-hidden="true">{children}</div>
+      {note && <p className="mt-4 font-semibold text-ink">{note}</p>}
+      <div className="mt-auto flex h-[300px] justify-center overflow-hidden pt-10 sm:h-[360px]">
+        <PhoneFrame screen={k} alt={`Daygini ${f.name} screen`} className="w-[220px] shrink-0 self-start sm:w-[250px]" />
+      </div>
     </article>
   );
 }
-
-const row = "flex items-center justify-between gap-3 rounded-tile bg-card px-4 py-3 text-sm font-semibold";
 
 export function Features() {
   return (
@@ -61,17 +62,8 @@ export function Features() {
         <Showcase k="todo" note="Todo = things I need to do." />
 
         <div className="grid gap-6 lg:grid-cols-2">
-          <Light k="lists" icon="list">
-            <p className="mb-4 font-semibold text-ink">Lists = things I need to remember or collect.</p>
-            <div className={row}><span className="flex items-center gap-3"><span className="size-4 rounded border-2 border-lists" />Milk</span><span className="text-muted">2 packs</span></div>
-            <div className={row}><span className="flex items-center gap-3"><span className="size-4 rounded border-2 border-lists" />Bread</span><span className="text-muted">1 loaf</span></div>
-            <div className={row}><span className="flex items-center gap-3 text-muted line-through"><span className="size-4 rounded bg-lists" />Rice</span><span className="text-muted">Bought</span></div>
-          </Light>
-          <Light k="occasions" icon="cake">
-            <div className={row}><span>Asha&apos;s birthday</span><span className="text-occasions-ink">Today</span></div>
-            <div className={row}><span>Anniversary</span><span className="text-muted">12 Nov</span></div>
-            <div className={row}><span>Ravi&apos;s wedding</span><span className="text-muted">2 Dec</span></div>
-          </Light>
+          <Light k="lists" icon="list" note="Lists = things I need to remember or collect." />
+          <Light k="occasions" icon="cake" />
         </div>
       </Container>
     </section>

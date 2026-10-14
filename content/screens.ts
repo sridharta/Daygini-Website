@@ -29,8 +29,20 @@ export type MockScreen = {
  * Real screenshots: drop PNGs into /public/screenshots and map them here
  * (e.g. money: "/screenshots/money.png"). Mapped screens replace the built-in
  * mock automatically; nothing else needs to change.
+ *
+ * These are the app screens cropped from the Play Store listing images
+ * (daygini app repo: assets/store_listing/android), 744×1366 each.
  */
-export const screenshotFiles: Partial<Record<ScreenKey, string>> = {};
+export const screenshotSize = { width: 744, height: 1366 };
+
+export const screenshotFiles: Partial<Record<ScreenKey, string>> = {
+  home: "/screenshots/home.png",
+  money: "/screenshots/money.png",
+  health: "/screenshots/health.png",
+  todo: "/screenshots/todo.png",
+  lists: "/screenshots/lists.png",
+  occasions: "/screenshots/occasions.png",
+};
 
 export const screens: Record<ScreenKey, MockScreen> = {
   home: {
