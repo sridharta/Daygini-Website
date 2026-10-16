@@ -34,10 +34,6 @@ export default function Privacy() {
         <p><strong className="text-ink">Transmitted off your device.</strong> If you create an account, we receive your <strong className="text-ink">account information</strong> — your email address, your name and a user ID — through Firebase Authentication. We also receive <strong className="text-ink">crash and diagnostic data</strong> and process <strong className="text-ink">advertising data</strong> as described under Third-party services and Advertising. We do not receive your Money, Todo, Lists, Occasions or Profile entries.</p>
       </Prose>
 
-      <Prose heading="Information from earlier versions">
-        <p>Earlier versions of Daygini included a Health feature. It has been removed, and Daygini no longer offers it or collects any new health information. If you used it in an earlier version, the entries you made stay only on your device. They are not shown in the app, are never sent to us or shared with any third party, and are never used for advertising. They are erased if you choose to erase your on-device data when you delete your account, or if you clear the app&apos;s data or uninstall the app.</p>
-      </Prose>
-
       <Prose heading="Account information">
         <p>You can use Daygini as a guest, or sign in with email or Google. If you sign in, we receive your email address and basic profile details such as your name, through Firebase Authentication. Google Sign-In is an optional way to sign in. Guests do not have an account, and none of their information leaves the device.</p>
       </Prose>
