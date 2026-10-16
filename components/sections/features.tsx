@@ -5,7 +5,6 @@ import { features, type FeatureKey } from "@/content/site";
 
 const tone: Record<FeatureKey, { panel: string; dot: string; ink: string }> = {
   money: { panel: "bg-money-bg", dot: "bg-money", ink: "text-money-ink" },
-  health: { panel: "bg-health-bg", dot: "bg-health", ink: "text-health-ink" },
   todo: { panel: "bg-todo-bg", dot: "bg-todo", ink: "text-todo-ink" },
   lists: { panel: "bg-lists-bg", dot: "bg-lists", ink: "text-lists-ink" },
   occasions: { panel: "bg-occasions-bg", dot: "bg-occasions", ink: "text-occasions-ink" },
@@ -13,7 +12,7 @@ const tone: Record<FeatureKey, { panel: string; dot: string; ink: string }> = {
 
 const byKey = Object.fromEntries(features.map((f) => [f.key, f])) as Record<FeatureKey, (typeof features)[number]>;
 
-function Showcase({ k, reverse = false, note }: { k: "money" | "health" | "todo"; reverse?: boolean; note?: string }) {
+function Showcase({ k, reverse = false, note }: { k: "money" | "todo"; reverse?: boolean; note?: string }) {
   const f = byKey[k];
   const t = tone[k];
   return (
@@ -58,8 +57,7 @@ export function Features() {
     <section id="features" aria-label="Features" className="border-t border-line py-24 sm:py-36">
       <Container className="space-y-28 sm:space-y-40">
         <Showcase k="money" />
-        <Showcase k="health" reverse />
-        <Showcase k="todo" note="Todo = things I need to do." />
+        <Showcase k="todo" reverse note="Todo = things I need to do." />
 
         <div className="grid gap-6 lg:grid-cols-2">
           <Light k="lists" icon="list" note="Lists = things I need to remember or collect." />

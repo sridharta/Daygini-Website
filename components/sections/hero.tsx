@@ -13,7 +13,7 @@ export function Hero() {
               Your day, all in one place.
             </h1>
             <p className="mt-7 max-w-md text-lg leading-relaxed text-on-hero-muted sm:text-xl">
-              Manage your money, track your health, organize tasks and lists, and remember important moments from one simple app.
+              Manage your money, organize tasks and lists, and remember important moments from one simple app.
             </p>
             <div className="mt-10">
               <StoreButtons variant="hero" size="lg" />
@@ -22,7 +22,7 @@ export function Hero() {
           <div className="relative h-[380px] sm:h-[520px] lg:h-auto lg:min-h-[700px]">
             <PhoneFrame
               screen="home"
-              alt="Daygini Home dashboard showing money, health, tasks, lists and occasions for the day"
+              alt="Daygini Home screen showing today's tasks, bills, occasions and items to get, with Money and Todo dashboard cards"
               priority
               className="settle absolute -bottom-[9%] left-1/2 w-[58%] max-w-[330px] -translate-x-1/2 sm:w-[46%] lg:w-[78%]"
             />

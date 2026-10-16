@@ -4,7 +4,6 @@ import type { AccentKey } from "@/content/site";
 const tone: Record<AccentKey, { bg: string; fg: string; ink: string }> = {
   primary: { bg: "bg-primary-container", fg: "bg-primary", ink: "text-on-primary-container" },
   money: { bg: "bg-money-bg", fg: "bg-money", ink: "text-money-ink" },
-  health: { bg: "bg-health-bg", fg: "bg-health", ink: "text-health-ink" },
   todo: { bg: "bg-todo-bg", fg: "bg-todo", ink: "text-todo-ink" },
   lists: { bg: "bg-lists-bg", fg: "bg-lists", ink: "text-lists-ink" },
   occasions: { bg: "bg-occasions-bg", fg: "bg-occasions", ink: "text-occasions-ink" },

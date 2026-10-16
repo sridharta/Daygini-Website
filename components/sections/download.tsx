@@ -11,7 +11,7 @@ export function Download() {
           <h2 id="download-title" className="mt-8 max-w-3xl text-4xl font-extrabold leading-[1.05] tracking-[-0.035em] sm:text-6xl">
             Make everyday life easier to manage.
           </h2>
-          <p className="mt-5 max-w-lg text-lg text-balance text-on-hero-muted sm:text-xl">Money. Health. Tasks. Lists. Occasions. One simple app.</p>
+          <p className="mt-5 max-w-lg text-lg text-balance text-on-hero-muted sm:text-xl">Money. Tasks. Lists. Occasions. One simple app.</p>
           <div className="mt-10 w-full sm:w-auto">
             <StoreButtons variant="hero" size="lg" center />
           </div>

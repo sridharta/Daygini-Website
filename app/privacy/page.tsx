@@ -15,7 +15,7 @@ export default function Privacy() {
   return (
     <PageShell title="Privacy Policy" intro={`Last updated ${site.legalUpdated}. This policy explains what the Daygini app collects, how it is used and the choices you have.`}>
       <Prose heading="Overview">
-        <p>Daygini is a personal organizer that works on your device. Daygini is <strong className="text-ink">local-first</strong>: the money, health, task, list, occasion and profile information you add is stored only on your device and is not sent to us or to any server. The limited information that does leave your device is described below. By using Daygini you agree to this policy and to our <Link href="/terms">Terms &amp; Conditions</Link>.</p>
+        <p>Daygini is a personal organizer that works on your device. Daygini is <strong className="text-ink">local-first</strong>: the money, task, list, occasion and profile information you add is stored only on your device and is not sent to us or to any server. The limited information that does leave your device is described below. By using Daygini you agree to this policy and to our <Link href="/terms">Terms &amp; Conditions</Link>.</p>
       </Prose>
 
       <Prose heading="Who can use Daygini">
@@ -26,22 +26,16 @@ export default function Privacy() {
         <p><strong className="text-ink">Stored only on your device.</strong> The following is saved on your device and is never transmitted to us or any server:</p>
         <ul>
           <li><strong className="text-ink">Money</strong> — income, expenses, subscriptions, loans and transaction history.</li>
-          <li><strong className="text-ink">Health</strong> — water, calories, steps, sleep, weight, breathing and medication (see the Health data section below).</li>
           <li><strong className="text-ink">Todo</strong> — tasks, due dates, times, repeats, reminders and categories.</li>
           <li><strong className="text-ink">Lists</strong> — checklists, grocery lists and reusable lists.</li>
           <li><strong className="text-ink">Occasions</strong> — birthdays, anniversaries and other dates you add, and their reminders.</li>
           <li><strong className="text-ink">Profile and settings</strong> — the preferences and profile details you set inside the app.</li>
         </ul>
-        <p><strong className="text-ink">Transmitted off your device.</strong> If you create an account, we receive your <strong className="text-ink">account information</strong> — your email address, your name and a user ID — through Firebase Authentication. We also receive <strong className="text-ink">crash and diagnostic data</strong> and process <strong className="text-ink">advertising data</strong> as described under Third-party services and Advertising. We do not receive your Money, Health, Todo, Lists, Occasions or Profile entries.</p>
+        <p><strong className="text-ink">Transmitted off your device.</strong> If you create an account, we receive your <strong className="text-ink">account information</strong> — your email address, your name and a user ID — through Firebase Authentication. We also receive <strong className="text-ink">crash and diagnostic data</strong> and process <strong className="text-ink">advertising data</strong> as described under Third-party services and Advertising. We do not receive your Money, Todo, Lists, Occasions or Profile entries.</p>
       </Prose>
 
-      <Prose heading="Health data">
-        <p>Daygini lets you record Water, Calories, Steps, Sleep, Weight, Breathing and Medication. You enter this information yourself.</p>
-        <ul>
-          <li><strong className="text-ink">Storage.</strong> Health data is stored only on your device.</li>
-          <li><strong className="text-ink">Access and sharing.</strong> It is not sent to us, is not shared with any third party, and is never used for advertising.</li>
-          <li><strong className="text-ink">Deletion.</strong> You can delete any health entry in the app at any time. It is also removed if you choose to erase your on-device data when you delete your account, or if you clear the app&apos;s data or uninstall the app.</li>
-        </ul>
+      <Prose heading="Information from earlier versions">
+        <p>Earlier versions of Daygini included a Health feature. It has been removed, and Daygini no longer offers it or collects any new health information. If you used it in an earlier version, the entries you made stay only on your device. They are not shown in the app, are never sent to us or shared with any third party, and are never used for advertising. They are erased if you choose to erase your on-device data when you delete your account, or if you clear the app&apos;s data or uninstall the app.</p>
       </Prose>
 
       <Prose heading="Account information">
@@ -55,7 +49,7 @@ export default function Privacy() {
       <Prose heading="Permissions">
         <p>Daygini requests one sensitive permission:</p>
         <ul>
-          <li><strong className="text-ink">Notifications and alarms</strong>, to deliver reminders for tasks, medication and occasions. Reminders are scheduled on your device.</li>
+          <li><strong className="text-ink">Notifications and alarms</strong>, to deliver the reminders you set, such as for tasks, subscription renewals and occasions, and an optional weekly summary. Reminders are scheduled on your device.</li>
         </ul>
         <p>You can change this permission at any time in your device settings.</p>
       </Prose>
@@ -71,11 +65,11 @@ export default function Privacy() {
       </Prose>
 
       <Prose heading="Advertising">
-        <p>Daygini shows ads through Google AdMob. To serve ads, AdMob may use your device&apos;s advertising identifier and similar device information. Ads are never based on your health or money entries, which stay on your device. You can reset or limit your advertising identifier, and opt out of personalized ads, in your device&apos;s Google settings.</p>
+        <p>Daygini shows ads through Google AdMob. To serve ads, AdMob may use your device&apos;s advertising identifier and similar device information. Ads are never based on the entries you add in Daygini, which stay on your device. You can reset or limit your advertising identifier, and opt out of personalized ads, in your device&apos;s Google settings.</p>
       </Prose>
 
       <Prose heading="How we use information">
-        <p>We use information to run the app, sign you in, send the reminders you set, show ads, and fix crashes and improve Daygini. We do not sell your personal information, and we do not use your health or money entries for advertising.</p>
+        <p>We use information to run the app, sign you in, send the reminders you set, show ads, and fix crashes and improve Daygini. We do not sell your personal information, and we do not use your Money, Todo, Lists or Occasions entries for advertising.</p>
       </Prose>
 
       <Prose heading="Data security">
@@ -86,8 +80,9 @@ export default function Privacy() {
         <p>Your on-device entries are kept until you delete them, erase your data, or uninstall the app. Your account information is kept until you delete your account, after which it is removed from Firebase Authentication. Crash, diagnostic and advertising data are held by Google under Firebase Crashlytics&apos; and Google AdMob&apos;s own retention policies.</p>
       </Prose>
 
-      <Prose heading="Your choices">
+      <Prose heading="Your choices and rights">
         <p>You can edit or delete your entries in the app and turn off notifications in your device settings. You can delete your account in the app. See <Link href="/delete-account">how to delete your account</Link>, including what happens to the information on your device.</p>
+        <p>Depending on where you live, you may have the right to access, correct, delete or receive a copy of the personal information we hold about you, which is your account information, and to object to or restrict how we use it. We will not treat you differently for using these rights.</p>
         <p>For any privacy request or question, email {mail}.</p>
       </Prose>
 

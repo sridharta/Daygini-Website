@@ -15,7 +15,7 @@ export default function Terms() {
   return (
     <PageShell title="Terms & Conditions" intro={`Last updated ${site.legalUpdated}.`}>
       <Prose heading="1. About Daygini">
-        <p>Daygini is a personal organizer app. It helps you track money, track health, manage tasks and lists, and remember important occasions, with reminders and insights.</p>
+        <p>Daygini is a personal organizer app. It helps you track your money, manage tasks and lists, and remember important occasions, with reminders and insights.</p>
         <p>Daygini is for personal, non-commercial use.</p>
       </Prose>
 
@@ -40,7 +40,6 @@ export default function Terms() {
       <Prose heading="5. Daygini features">
         <ul>
           <li><strong className="text-ink">Money:</strong> income, expenses, subscriptions, loans and transaction history.</li>
-          <li><strong className="text-ink">Health:</strong> trackers such as water, calories, steps, sleep, weight and medication.</li>
           <li><strong className="text-ink">Todo:</strong> tasks with dates, times and reminders.</li>
           <li><strong className="text-ink">Lists:</strong> checklists and grocery lists without a set time.</li>
           <li><strong className="text-ink">Occasions:</strong> birthdays, anniversaries and other dates, with reminders.</li>
@@ -66,67 +65,58 @@ export default function Terms() {
         </ul>
       </Prose>
 
-      <Prose heading="8. Health disclaimer">
-        <p>Daygini is a personal tracking and wellness tool. It is not a medical device.</p>
-        <p>It does not diagnose, treat, cure or prevent any medical condition. Its scores, summaries and tips are for general information only. Always talk to a qualified healthcare professional about your health, and seek urgent medical help in an emergency.</p>
-      </Prose>
-
-      <Prose heading="9. Medication reminders">
-        <p>Medication reminders are a convenience. They may be late or missed, for example because of device settings, battery saving, a switched-off phone or a lack of permission.</p>
-        <p>You remain responsible for following your healthcare professional&apos;s advice and your medication instructions. Do not rely on Daygini as the only way to take medication on time or to handle an emergency.</p>
-      </Prose>
-
-      <Prose heading="10. Financial disclaimer">
+      <Prose heading="8. Financial disclaimer">
         <p>The Money features are personal tracking tools. Daygini is not a bank, lender, accountant, financial institution, investment adviser or financial planning service.</p>
         <p>The information and insights you see come from what you enter. They are not professional financial advice, so check important figures and decisions yourself or with a qualified professional.</p>
       </Prose>
 
-      <Prose heading="11. Notifications and permissions">
+      <Prose heading="9. Notifications and permissions">
         <p>Some features need permission on your device, such as notifications for reminders.</p>
         <p>You control these permissions in your device settings. If you turn a permission off, the related features may not work.</p>
+        <p>Reminders are a convenience. They may be late or missed, for example because of device settings, battery saving, a switched-off phone or a lack of permission. Do not rely on Daygini as the only way to remember important payments, deadlines or events.</p>
       </Prose>
 
-      <Prose heading="12. Third-party services">
+      <Prose heading="10. Third-party services">
         <p>Daygini uses services from other companies to work, including Firebase (sign-in and crash reporting), Google Sign-In, Google Drive (for optional backup), Google AdMob (for ads) and Google Play (to download and update the app).</p>
         <p>These services have their own terms and privacy policies, and we are not responsible for them. Our <Link href="/privacy">Privacy Policy</Link> explains more.</p>
       </Prose>
 
-      <Prose heading="13. Ads and paid features">
+      <Prose heading="11. Ads and paid features">
         <p>Daygini may show ads. If paid features are offered, they are handled through Google Play and are subject to its terms.</p>
       </Prose>
 
-      <Prose heading="14. Intellectual property">
+      <Prose heading="12. Intellectual property">
         <p>Daygini owns the app&apos;s software, name, logo, design and other materials. You get a personal, limited, non-transferable right to use the app under these Terms. You keep ownership of your own content.</p>
       </Prose>
 
-      <Prose heading="15. Account and data deletion">
+      <Prose heading="13. Account and data deletion">
         <p>You can delete your Daygini account in the app, under Settings, then Account, then Delete account. You can also read how it works, and how to ask us for help, on our <Link href="/delete-account">account deletion page</Link>.</p>
         <p>When you delete your account you can choose whether to keep or erase the information stored on your device. Backup files that you saved yourself, such as in your own Google Drive, are not removed by deleting your account, and you can delete them yourself.</p>
       </Prose>
 
-      <Prose heading="16. Service availability and changes">
+      <Prose heading="14. Service availability and changes">
         <p>We may improve, change, suspend or stop any part of Daygini. We do not promise that the app will always be available, error-free or uninterrupted.</p>
       </Prose>
 
-      <Prose heading="17. Termination">
+      <Prose heading="15. Termination">
         <p>You can stop using Daygini at any time. We may limit or end your access if you seriously or repeatedly break these Terms, misuse the app, or put the app, other people or our services at risk. Where reasonable, we will tell you why.</p>
       </Prose>
 
-      <Prose heading="18. Disclaimers">
+      <Prose heading="16. Disclaimers">
         <p>Daygini is provided &ldquo;as is&rdquo; and &ldquo;as available&rdquo;. We work to keep it useful and reliable, but we cannot promise that it will be accurate, always work on every device, or meet every need. This does not limit rights you have under the law that cannot be waived.</p>
       </Prose>
 
-      <Prose heading="19. Limitation of liability">
+      <Prose heading="17. Limitation of liability">
         <p>To the extent the law allows, Daygini is not responsible for indirect or consequential losses, or for losses caused by things outside our reasonable control. This includes lost or deleted local data, missed or late reminders, device problems, and decisions you make using information in the app.</p>
         <p>Nothing in these Terms excludes or limits liability that cannot be excluded or limited by law, such as liability for fraud, or for death or personal injury caused by negligence.</p>
       </Prose>
 
-      <Prose heading="20. Changes to these Terms">
+      <Prose heading="18. Changes to these Terms">
         <p>We may update these Terms. The date at the top shows when they were last changed.</p>
         <p>For material changes, we will give notice in a suitable way, such as in the app, on this website or by email, and where the law requires it we will ask for your agreement. If you do not agree to a change, you can stop using Daygini and delete your account.</p>
       </Prose>
 
-      <Prose heading="21. Contact">
+      <Prose heading="19. Contact">
         <p>Questions about these Terms? Email {mail}.</p>
       </Prose>
     </PageShell>

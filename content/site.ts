@@ -3,10 +3,10 @@ export const site = {
   url: "https://daygini.com",
   title: "Daygini | Your day, all in one place",
   description:
-    "Daygini helps you manage money, track health, organize tasks and lists, and remember important occasions in one simple app.",
+    "Daygini helps you manage your money, organize tasks and lists, and remember important occasions in one simple app.",
   supportEmail: "support@daygini.com",
   playStoreUrl: "https://play.google.com/store/apps/details?id=com.daygini.app",
-  legalUpdated: "9 October 2026",
+  legalUpdated: "16 October 2026",
 } as const;
 
 export const nav = [
@@ -16,7 +16,7 @@ export const nav = [
   { label: "Support", href: "/support" },
 ] as const;
 
-export type FeatureKey = "money" | "health" | "todo" | "lists" | "occasions";
+export type FeatureKey = "money" | "todo" | "lists" | "occasions";
 export type AccentKey = FeatureKey | "primary";
 
 export const features: {
@@ -36,17 +36,6 @@ export const features: {
       "Log an expense or income in a few taps",
       "See every subscription and loan in one place",
       "Browse your transaction history by day, month or type",
-    ],
-  },
-  {
-    key: "health",
-    headline: "Build better daily habits.",
-    name: "Health",
-    summary: "Water, calories, steps, sleep, weight, medication and breathing.",
-    points: [
-      "Daily goals for water, calories and steps",
-      "Medication reminders and a record of what you took",
-      "Guided breathing when you need a pause",
     ],
   },
   {
@@ -88,7 +77,7 @@ export const features: {
 ];
 
 export const whyReasons = [
-  { icon: "stack", title: "One app instead of many", body: "Money, health, tasks, lists and occasions in one place, not five disconnected apps." },
+  { icon: "stack", title: "One app instead of many", body: "Money, tasks, lists and occasions in one place, not four disconnected apps." },
   { icon: "sun", title: "Built around everyday life", body: "Made for the things you actually manage day to day." },
   { icon: "split", title: "Todo and Lists are separate on purpose", body: "Things to do have a time. Things to remember or collect don't." },
   { icon: "minimal", title: "Simple by design", body: "A calm, consistent app that is quick to add to and easy to read." },
@@ -97,14 +86,14 @@ export const whyReasons = [
 
 export const insightPoints = [
   "Where your money goes, by category",
-  "How your health habits are trending",
   "How many tasks you complete",
+  "What is left on your lists and which occasions are coming up",
 ] as const;
 
 export const faqs = [
   {
     q: "What is Daygini?",
-    a: "Daygini is an app that brings money, health, tasks, lists and important occasions together in one place.",
+    a: "Daygini is a personal productivity and money management app that brings your money, tasks, lists and important occasions together in one place.",
   },
   {
     q: "What is the difference between Todo and Lists?",

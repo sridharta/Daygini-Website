@@ -14,7 +14,7 @@ export default async function OpengraphImage() {
       <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "center", padding: 96, background: "linear-gradient(135deg,#b8461a,#723520)", color: "#fff" }}>
         <img src={src} width={96} height={96} alt="" />
         <div style={{ marginTop: 40, fontSize: 88, fontWeight: 800, letterSpacing: -3, lineHeight: 1.05 }}>Your day, all in one place.</div>
-        <div style={{ marginTop: 28, fontSize: 34, color: "#ffdbd0" }}>Money, health, tasks, lists and occasions in one simple app.</div>
+        <div style={{ marginTop: 28, fontSize: 34, color: "#ffdbd0" }}>Money, tasks, lists and occasions in one simple app.</div>
       </div>
     ),
     size,

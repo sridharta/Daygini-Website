@@ -29,9 +29,6 @@
   --money: #00a56a;
   --money-bg: #e2f9ef;
   --money-ink: #007c50;
-  --health: #d41472;
-  --health-bg: #ffe8f1;
-  --health-ink: #c9136c;
   --todo: #4f46e5;
   --todo-bg: #e0e7ff;
   --todo-ink: #3730a3;
@@ -72,9 +69,6 @@
     --money: #72e2b1;
     --money-bg: #0b4a35;
     --money-ink: #72e2b1;
-    --health: #ff87be;
-    --health-bg: #64143c;
-    --health-ink: #ff87be;
     --todo: #a5b4fc;
     --todo-bg: #312e81;
     --todo-ink: #c7d2fe;
@@ -110,9 +104,6 @@
   --color-money: var(--money);
   --color-money-bg: var(--money-bg);
   --color-money-ink: var(--money-ink);
-  --color-health: var(--health);
-  --color-health-bg: var(--health-bg);
-  --color-health-ink: var(--health-ink);
   --color-todo: var(--todo);
   --color-todo-bg: var(--todo-bg);
   --color-todo-ink: var(--todo-ink);

@@ -26,7 +26,7 @@ export default function DeleteAccount() {
       <Prose heading="Choose what happens to your on-device data">
         <p>When you delete your account, your Daygini account is removed either way. You then choose what happens to the information stored on your device:</p>
         <ul>
-          <li><strong className="text-ink">Keep my data</strong> — your money, health, tasks, lists, occasions, reminders and settings stay on this device so you can keep using Daygini as a guest.</li>
+          <li><strong className="text-ink">Keep my data</strong> — your money, tasks, lists, occasions, reminders and settings stay on this device so you can keep using Daygini as a guest.</li>
           <li><strong className="text-ink">Delete my data</strong> — that information is erased from the device and cannot be recovered.</li>
         </ul>
         <p>Choosing <strong className="text-ink">Keep my data</strong> does <strong className="text-ink">not</strong> restore or preserve your account. Your account and its sign-in are permanently deleted regardless of this choice; keeping the data only leaves a local copy on your device.</p>

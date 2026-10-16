@@ -1,6 +1,6 @@
 import type { AccentKey } from "./site";
 
-export type ScreenKey = "home" | "money" | "health" | "todo" | "lists" | "occasions" | "insights";
+export type ScreenKey = "home" | "money" | "todo" | "lists" | "occasions" | "insights";
 
 export type MockRow = {
   title: string;
@@ -31,15 +31,15 @@ export type MockScreen = {
  * mock automatically; nothing else needs to change.
  *
  * These are the app screens cropped from the Play Store listing images
- * (daygini app repo: assets/store_listing/android), 744×1366 each. Insights
+ * (daygini app repo: assets/store_listing/android), 744×1366 each. Home is
+ * stitched from the two Home listing images (same screen, scrolled). Insights
  * has no listing image, so it is cropped from the dev build to the same size.
  */
 export const screenshotSize = { width: 744, height: 1366 };
 
 export const screenshotFiles: Partial<Record<ScreenKey, string>> = {
-  home: "/screenshots/home.png",
+  home: "/screenshots/home-v2.png",
   money: "/screenshots/money.png",
-  health: "/screenshots/health.png",
   todo: "/screenshots/todo.png",
   lists: "/screenshots/lists.png",
   occasions: "/screenshots/occasions.png",
@@ -56,14 +56,13 @@ export const screens: Record<ScreenKey, MockScreen> = {
     rowsTitle: "Your day",
     rows: [
       { title: "Money", meta: "Spent today", value: "₹640", accent: "money" },
-      { title: "Health", meta: "Water 5 of 8 glasses", accent: "health" },
       { title: "Todo", meta: "3 due today", accent: "todo" },
       { title: "Lists", meta: "Weekly groceries", value: "4 left", accent: "lists" },
       { title: "Occasions", meta: "Asha's birthday", value: "Today", accent: "occasions" },
     ],
     more: { title: "Up next", rows: [
       { title: "Send invoice", meta: "10:00 AM · Todo", accent: "todo" },
-      { title: "Take vitamins", meta: "1:00 PM · Medication", accent: "health" },
+      { title: "Electricity bill", meta: "Tomorrow · Money", value: "₹1,480", accent: "money" },
     ] },
   },
   money: {
@@ -83,25 +82,6 @@ export const screens: Record<ScreenKey, MockScreen> = {
     more: { title: "Coming up", rows: [
       { title: "Rent", meta: "Due Friday", value: "₹12,000", accent: "money" },
       { title: "Electricity", meta: "Due Sunday", value: "₹1,480", accent: "money" },
-    ] },
-  },
-  health: {
-    title: "Health",
-    subtitle: "Today",
-    accent: "health",
-    label: "Goals on track",
-    value: "4 of 6",
-    chart: [50, 70, 40, 85, 60, 75, 55],
-    rowsTitle: "Today's focus",
-    rows: [
-      { title: "Water", meta: "5 of 8 glasses", value: "62%", accent: "health" },
-      { title: "Steps", meta: "Goal 8,000", value: "6,214", accent: "health" },
-      { title: "Sleep", meta: "Last night", value: "7h 20m", accent: "health" },
-      { title: "Medication", meta: "Due 8:00 PM", accent: "health" },
-    ],
-    more: { title: "Also today", rows: [
-      { title: "Breathing", meta: "Calm 4-2-6", value: "3 min", accent: "health" },
-      { title: "Weight", meta: "This week", value: "68.4 kg", accent: "health" },
     ] },
   },
   todo: {
@@ -163,9 +143,9 @@ export const screens: Record<ScreenKey, MockScreen> = {
       { title: "Transport", value: "21%", accent: "money" },
       { title: "Bills", value: "17%", accent: "money" },
     ],
-    more: { title: "Health trends", rows: [
-      { title: "Water", meta: "Daily average", value: "6.2 glasses", accent: "health" },
-      { title: "Sleep", meta: "Daily average", value: "7h 05m", accent: "health" },
+    more: { title: "Tasks and lists", rows: [
+      { title: "Tasks completed", meta: "Last 30 days", value: "42", accent: "todo" },
+      { title: "Items picked up", meta: "Weekly groceries", value: "18 of 24", accent: "lists" },
     ] },
   },
 };
